@@ -1,10 +1,16 @@
 # hexapodGUI
-HexapodGUI is a hexapod robot controller interface.
+**HexapodGUI** is a Windows application (Written in C#) that **reads**, **writes** and **plots** data from/to serial port.
 
-I have a standard protokol for data transmission.
-[Header],[setPoint],[Proportional],[Integral],[Derivative],[PID],[frontSensor],[leftBevelSensor],[rightBevelSensor],[leftRange],[rightRange]
+## Features
+* Read and write data to serial ports even under high traffic load without freezing.
+* Serial plotter for up to 5 different channels.
+* Data logger to save incoming data to a **.txt** file.
 
-From the data transmission protocol, I have an example of a simple arduino program
+## How to plot serial data?
+In order for the data to be plotted, variables must be **seperated by comma ( , )** and a **newline ( \n )** character must be added at the end.
+
+###Here an example code for [**Arduino**] platform
+```arduino
 #define setPoint  15.0    // Jarak robot dengan dinding
 #define KP        0.1     // Konstanta Proporsional PID
 #define KD        6.0     // Konstanta Derivative / Turunan PID
@@ -95,3 +101,9 @@ void fullPID()
     Serial.println();
     delay(200);
 }
+```
+so data must be in this form
+```
+[Header],[setPoint],[Proportional],[Integral],[Derivative],[PID],[frontSensor],[leftBevelSensor],[rightBevelSensor],[leftRange],[rightRange]
+```
+

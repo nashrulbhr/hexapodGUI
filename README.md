@@ -9,7 +9,7 @@
 ## How to process serial data?
 In order for the data to be process, variables must be **seperated by comma ( , )** and a **newline ( \n )** character must be added at the end.
 
-###Here an example code for [**Arduino**] platform
+### Here an example code for [**Arduino**] platform
 ```arduino
 #define setPoint  15.0    // Jarak robot dengan dinding
 #define KP        0.1     // Konstanta Proporsional PID

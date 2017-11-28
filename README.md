@@ -11,11 +11,11 @@ In order for the data to be process, variables must be **seperated by comma ( , 
 
 ### Here an example code for [**Arduino**] platform
 ```arduino
-#define setPoint  15.0    // Jarak robot dengan dinding
-#define KP        0.1     // Konstanta Proporsional PID
-#define KD        6.0     // Konstanta Derivative / Turunan PID
-#define KI        1.1     // Konstanta Integral PID
-#define TS        1       // Konstanta Time Sampling PID
+#define setPoint  15.0    // Space hexapod to wall
+#define KP        0.1     // Proportional Constant
+#define KD        6.0     // Derivative Constant
+#define KI        1.1     // Integral Constant
+#define TS        1       // Time Sampling Constant
 
 float lastErr = 0;
 float var1,
@@ -70,11 +70,11 @@ void fullPID()
     var3 =   KD;                              //Kd
     var4 =   KI;                              //Ki
     var5 =   PID(pv) + random(16.55, 17.55);  //PID
-    var6 =   random(70, 75);                  //FPing
-    var7 =   random(24, 26);                  //FLPing
-    var8 =   random(45, 47);                  //FRPing
-    var9 =   random(19, 20) + dPID;           //LRange
-    var10 =  random(19, 20) - dPID;           //RRange
+    var6 =   random(70, 75);                  //frontPing
+    var7 =   random(24, 26);                  //leftBevelPing
+    var8 =   random(45, 47);                  //rightBevelPing
+    var9 =   random(19, 20) + dPID;           //leftRange
+    var10 =  random(19, 20) - dPID;           //rightRange
     
     //send variables
     Serial.print("HD");
@@ -104,6 +104,6 @@ void fullPID()
 ```
 so data must be in this form
 ```
-[Header],[setPoint],[Proportional],[Integral],[Derivative],[PID],[frontSensor],[leftBevelSensor],[rightBevelSensor],[leftRange],[rightRange]
+<Header>,<setPoint>,<Proportional>,<Integral>,<Derivative>,<PID>,<frontSensor>,<leftBevelSensor>,<rightBevelSensor>,<leftRange>,<rightRange>
 ```
 

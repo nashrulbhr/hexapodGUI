@@ -6,8 +6,8 @@
 * Serial plotter for up to 5 different channels.
 * Data logger to save incoming data to a **.txt** file.
 
-## How to plot serial data?
-In order for the data to be plotted, variables must be **seperated by comma ( , )** and a **newline ( \n )** character must be added at the end.
+## How to process serial data?
+In order for the data to be process, variables must be **seperated by comma ( , )** and a **newline ( \n )** character must be added at the end.
 
 ###Here an example code for [**Arduino**] platform
 ```arduino

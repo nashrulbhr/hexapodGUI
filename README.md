@@ -102,8 +102,14 @@ void fullPID()
     delay(200);
 }
 ```
+
 so data must be in this form
 ```
 <Header>,<setPoint>,<Proportional>,<Integral>,<Derivative>,<PID>,<frontSensor>,<leftBevelSensor>,<rightBevelSensor>,<leftRange>,<rightRange>
 ```
 
+data at serial monitor
+![image](https://github.com/nashrulbhr/hexapodGUI/assets/23648378/984f8fd2-4cb3-43be-825e-bd1c8b36b449)
+
+view data at GUI
+![image](https://github.com/nashrulbhr/hexapodGUI/assets/23648378/6ab5ee3b-4bbe-440b-b6f7-de18dd3c2f8d)
